@@ -1,11 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 
-export const styles = makeStyles((theme) => ({
-
-
-
-}))
 
 export const FooterContainer = styled.div`
 background-color:#232F3E;
@@ -54,6 +49,23 @@ export const Image = styled.img`
     width: 76px;
     height: 23px;
 `
+
+
+
+
+//------UI------//
+// export const styles = makeStyles((theme) => ({
+//     root: {
+//       flexGrow: 1,
+//     },
+//     paper: {
+//       padding: theme.spacing(2),
+//       textAlign: 'center',
+//       color: theme.palette.text.secondary,
+//     },
+//   }));
+
+
 
 export const FooterBoxContain = styled.span`
 margin-left: 70px;

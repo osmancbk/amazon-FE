@@ -1,9 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {Wrapper, StyledImage, Page } from './SliderBottom.style';
+import { StyledImage, Page } from './SliderBottom.style';
 import './SliderBottom.css';
+import { Container } from '@material-ui/core';
 
 import p1 from '../../assets/a.jpg'
 import p2 from '../../assets/b.jpg'
@@ -17,21 +16,54 @@ import p9 from '../../assets/h.jpg'
 
 
 export default function SliderTop() {
-  
+
   var settings = {
     // dots: true,
     infinite: true,
-    speed: 500,
+    speed: 4000,
+    initialSlide: 0,
+
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrow: true,
+    // arrow: true,
+    autoplay: true,
+    autoplaySpeed: 1300,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          // initialSlide: 2
+           infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      }
+    ]
   };
 
 
 
     return (
 
-        <Wrapper>
+        <Container>
             <Slider {...settings}
            // infinite = {true}
             // slidesToShow = {5}
@@ -62,7 +94,7 @@ export default function SliderTop() {
 
                
             </Slider>
-        </Wrapper>
+        </Container>
   
     )
 
