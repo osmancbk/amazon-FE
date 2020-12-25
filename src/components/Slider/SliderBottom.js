@@ -1,63 +1,53 @@
 import React from "react";
 import Slider from "react-slick";
-import styled from 'styled-components';
-import p1 from '../../assets/1.jpg'
-import p2 from '../../assets/2.jpg'
-import p3 from '../../assets/3.jpg'
-import p5 from '../../assets/5.jpg'
-import p6 from '../../assets/6.jpg'
-import p7 from '../../assets/7.jpg'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {Wrapper, StyledImage, Page } from './SliderBottom.style';
+import './SliderBottom.css';
 
-
-
-const Wrapper = styled.div`
-margin-top: 20;
-width: 50;
-max-height: 50;
-/* z-index: -1; */
-/* position: absolute; */
-  /* top: 59px; */
-
-`;
-
-const StyledImage = styled.img`
-width: auto;
-height: 76%;
-object-fit: contain;
-/* border-radius: 50%; */
-position: relative;
-`;
-
-const Page = styled.div`
- width: 50;
- height: 50;
-
-  /* margin-bottom: -90px; */
-  /* mask-image: linear-gradient(to top, transparent 20%, black 55%); */
- 
-`;
+import p1 from '../../assets/a.jpg'
+import p2 from '../../assets/b.jpg'
+import p3 from '../../assets/c.jpg'
+import p5 from '../../assets/d.jpg'
+import p6 from '../../assets/e.jpg'
+import p7 from '../../assets/f.jpg'
+import p8 from '../../assets/g.jpg'
+import p9 from '../../assets/h.jpg'
 
 
 
 export default function SliderTop() {
+  
+  var settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrow: true,
+  };
+
+
 
     return (
 
         <Wrapper>
-            <Slider
+            <Slider {...settings}
+           // infinite = {true}
+            // slidesToShow = {5}
+            // speed={900}
+             // slidesToScroll={3}
+            // arrows = {true}
+
             //   dots = {true}
-              infinite = {true}
             //   speed = {300}
-              slidesToShow = {5}
             //   centerMode = {true}
-                // infinite={false}
-                // lazyLoad= {true}
-                // speed={500}
-                // slidesToShow={3}
-                slidesToScroll={3}
+            // infinite={false}
+            // lazyLoad= {true}
+            // slidesToShow={3}
             // dots={true}
             // accessibility = {true}
-            arrows = {true}
+   
             >
 
                 <Page><StyledImage src={p1} alt="Logo" /></Page>
@@ -66,6 +56,10 @@ export default function SliderTop() {
                 <Page><StyledImage src={p5} alt="Logo" /></Page>
                 <Page><StyledImage src={p6} alt="Logo" /></Page>
                 <Page><StyledImage src={p7} alt="Logo" /></Page>
+                <Page><StyledImage src={p8} alt="Logo" /></Page>
+                <Page><StyledImage src={p9} alt="Logo" /></Page>
+
+
                
             </Slider>
         </Wrapper>

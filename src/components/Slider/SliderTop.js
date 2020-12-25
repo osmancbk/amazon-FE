@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import p1 from '../../assets/1.jpg'
 import p2 from '../../assets/2.jpg'
 import p3 from '../../assets/3.jpg'
+import p4 from '../../assets/4.jpg'
 import p5 from '../../assets/5.jpg'
 import p6 from '../../assets/6.jpg'
 import p7 from '../../assets/7.jpg'
@@ -44,6 +45,7 @@ export default function SliderTop() {
                 <Page><img src={p1} alt="Logo" /></Page>
                 <Page><img src={p2} alt="Logo" /></Page>
                 <Page><img src={p3} alt="Logo" /></Page>
+                <Page><img src={p4} alt="Logo" /></Page>
                 <Page><img src={p5} alt="Logo" /></Page>
                 <Page><img src={p6} alt="Logo" /></Page>
                 <Page><img src={p7} alt="Logo" /></Page>

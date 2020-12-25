@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/Home';
 import Signup from '../pages/Signup';
 import Products from '../pages/Products';
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 //exact
 function AppRouter() {
 
@@ -14,8 +15,8 @@ function AppRouter() {
                     <Route path='/products' component={Products} exact/>
                     <Route path='/signup' component={Signup} />
                     <Route path='/' component={HomePage} />
-
                 </Switch>
+                <Footer />
             </Router>
         </div>
     );
