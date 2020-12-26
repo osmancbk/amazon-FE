@@ -9,7 +9,7 @@ export const styles = makeStyles({
     minWidth: 200,
     width: 'auto',
     height: '100%',
-    textAlign: 'left',
+    // textAlign: 'left',
     margin: 'auto',
     display: 'flex',
     flexDirection: 'column',
@@ -26,6 +26,7 @@ export const styles = makeStyles({
     height: 200,
     width: 250,
     objectFit: 'contain',
+
   },
   inCard: {
 

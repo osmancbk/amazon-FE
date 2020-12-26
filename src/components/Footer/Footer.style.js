@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 
 //------UI------//
+
 export const styles = makeStyles((theme) => ({
     bottomContainer: {
         color: 'white',
-
+        // direction: "row", 
+        // justifyContent :"space-evenly",
+        // alignItems:"center" 
 
 
     },

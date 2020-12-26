@@ -1,6 +1,27 @@
 import styled from 'styled-components';
+import { makeStyles } from "@material-ui/core/styles";
 import "slick-carousel/slick/slick.css";//*
 import "slick-carousel/slick/slick-theme.css";//*
+
+
+
+export const styles = makeStyles(() => ({
+  root: {
+    // width: '100%',
+  // margin: '0',
+  padding:'0px',
+  // margin:'0px',
+    // top: '59px',
+    // bottom: '-20px',
+    // right: '-20px',
+
+    // top: '59px',
+
+  },
+
+}));
+
+
 
 
 export const Wrapper = styled.div`

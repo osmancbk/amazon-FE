@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Box } from '@material-ui/core';
+import { Grid, Container, Box, Hidden } from '@material-ui/core';
 import { styles, LinkText, FooterTitle, FooterSubTitle, FooterContainer, Link, Image, Box1, Box2, Box3 } from './Footer.style'
 import logo from '../../assets/amazonLg.png'
 
@@ -20,9 +20,10 @@ export default function Footer() {
                 <Container maxWidth="md">
 
 
-                    <Grid container spacing={3} >
+                    <Grid container spacing={3} direction="row"
+                     >
 
-                        <Grid item xs={3}>
+                        <Grid item lg={3} md={4} sm={6} xs={12} >
                             <FooterTitle>Get to Know Us</FooterTitle>
                             <FooterSubTitle>Careers</FooterSubTitle>
                             <FooterSubTitle>Blog</FooterSubTitle>
@@ -32,7 +33,7 @@ export default function Footer() {
                             <FooterSubTitle>Amazon Devices</FooterSubTitle>
                             <FooterSubTitle>Amazon Tours</FooterSubTitle>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item lg={3} md={4} sm={6} xs={12} >
                             <FooterTitle>Sell products on Amazon</FooterTitle>
                             <FooterSubTitle> Sell apps on Amazon</FooterSubTitle>
                             <FooterSubTitle>Become an Affiliate</FooterSubTitle>
@@ -41,14 +42,14 @@ export default function Footer() {
                             <FooterSubTitle>Host an Amazon Hub</FooterSubTitle>
                             <FooterSubTitle>›See More Make Money with Us</FooterSubTitle>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item lg={3} md={4} sm={6} xs={12} >
                             <FooterTitle >Amazon Payment Products</FooterTitle>
                             <FooterSubTitle>Amazon Business Card</FooterSubTitle>
                             <FooterSubTitle>Shop with Points</FooterSubTitle>
                             <FooterSubTitle>Reload Your Balance</FooterSubTitle>
                             <FooterSubTitle>Amazon Currency Converter</FooterSubTitle>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item lg={3} md={4} sm={6} xs={12} >
                             <FooterTitle>Let Us Help You</FooterTitle>
                             <FooterSubTitle>Amazon and COVID-19</FooterSubTitle>
                             <FooterSubTitle>Your Account</FooterSubTitle>
@@ -64,29 +65,45 @@ export default function Footer() {
                 </Container>
 
 
-             <Box className={classes.defaultProps} border={1} />
+                <Hidden xsDown>
+                <Box className={classes.defaultProps} border={1} />
+
+
                 <Container className={classes.bottomContainer} >
 
-                    <Grid container spacing={3} direction="row" justify="center"
-                        alignItems="center" >
+                    <Grid container spacing={3}  direction="row" justify="space-evenly" alignItems="center">
 
-                        <Grid item  >
-                            <Image src={logo} alt="Logo"  />
+                        <Grid  item container  spacing={3} lg={1} md={1} sm={1} xs={12} 
+                         direction="row" 
+                        >
+
+                            <Grid item  >
+                                <Image src={logo} alt="Logo" />
+                            </Grid>
+
                         </Grid>
 
-                        <Grid item >
-                            <Box1>* English</Box1>
-                        </Grid>
-                        <Grid item >
-                            <Box2>$ USD - U.S. Dollar</Box2>
-                        </Grid>
-                        <Grid item  >
-                            <Box3>* Unidted States </Box3>
+                        <Grid item container  spacing={3} lg={5} md={5} sm={5} xs={12}
+                        direction="row" 
+                        >
+
+                            <Grid item >
+                                <Box1>* English</Box1>
+                            </Grid>
+                            <Grid item >
+                                <Box2>$ USD - U.S. Dollar</Box2>
+                            </Grid>
+                            <Grid item  >
+                                <Box3>* Unidted States </Box3>
+                            </Grid>
+
+
                         </Grid>
 
                     </Grid>
 
                 </Container>
+                </Hidden>
 
             </FooterContainer>
 

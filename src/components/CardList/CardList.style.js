@@ -1,17 +1,49 @@
 import { makeStyles } from "@material-ui/core/styles";
 import styled from 'styled-components';
 
-export const styles = makeStyles(() => ({ 
-    wrapper: {
-        textAlign: 'center',
-        // marginTop: -10,
-        marginBottom: 70,
+export const styles = makeStyles((theme) => ({
+    root: {
+        [theme.breakpoints.down('xl')]: {
+            // backgroundColor: 'pink',
+            textAlign: 'center',
+            position: 'relative',    
+            marginBottom: 70,
+            marginTop: -380,
+
+          },
+        [theme.breakpoints.down('lg')]: {
+            textAlign: 'center',
+            position: 'relative',    
+            marginBottom: 70,
+            marginTop: -280,
+
+          },
+
+        [theme.breakpoints.down('md')]: {
+            textAlign: 'center',
+            position: 'relative',    
+            marginBottom: 70,
+            marginTop: -250,
+
+          },
+          [theme.breakpoints.down('sm')]: {
+            textAlign: 'center',
+            position: 'relative',
+            marginBottom: 70,
+            marginTop: -170
+            ,
+          },
+
+          [theme.breakpoints.down('xs')]: {
+            textAlign: 'center',
+            position: 'relative',
+            marginBottom: 70,
+            marginTop: -100,
+          },
 
     },
     grid: {
-        // marginTop: -200,
-         marginTop: 250,
-         marginBottom: 20,
+        marginBottom: 20,
     }
 }));
 
@@ -25,7 +57,5 @@ export const Box = styled.div`
       background-color: #F5F6F6;
       padding: 10px;
       color: #0F1111;
-      /* display:block; */
-      /* box-sizing: border-box; */
 
 `;

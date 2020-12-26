@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ProductContext } from '../../pages/Home'
 import { MediaCard } from '../../components/Card'; //*
 // import { fetchData } from '../../helper/FetchData'
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid,Typography } from '@material-ui/core';
 import { styles, Box } from './CardList.style'
 
 // category: "men clothing"
@@ -20,7 +20,7 @@ export function CardList() {
     const { productList } = useContext(ProductContext)
     //maxWidth="sm"  maxWidth={'xl'}
     return (
-        <Container className={classes.wrapper} maxWidth={'xl'}> 
+        <Container className={classes.root}  maxWidth={'xl'}> 
             <Grid container className={classes.grid}>
                 <Grid item xs={12} >
                     <Box>   indirim kuponundan yararlanmak için kupon kısmına CODE47 yazınız.</Box>
@@ -31,7 +31,7 @@ export function CardList() {
             <Grid container spacing={6}>
                 {productList?.map((products) => {
                     return (
-                        <Grid item md={3} sm={4} xs={6} key={products.id}>
+                        <Grid item lg={3} md={4} sm={6} xs={12} key={products.id}>
                             <MediaCard
                                 productPrice={products.price}
                                 productImage={products.image}

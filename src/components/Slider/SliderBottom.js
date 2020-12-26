@@ -1,8 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { StyledImage, Page } from './SliderBottom.style';
-import './SliderBottom.css';
-import { Container } from '@material-ui/core';
+import { Container, Hidden } from '@material-ui/core';
 
 import p1 from '../../assets/a.jpg'
 import p2 from '../../assets/b.jpg'
@@ -33,10 +32,10 @@ export default function SliderTop() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
-          
+
         }
       },
       {
@@ -45,7 +44,7 @@ export default function SliderTop() {
           slidesToShow: 2,
           slidesToScroll: 2,
           // initialSlide: 2
-           infinite: true,
+          infinite: true,
         }
       },
       {
@@ -61,26 +60,27 @@ export default function SliderTop() {
 
 
 
-    return (
-//maxWidth={'xl'}
-        <Container maxWidth={'xl'} >
-            <Slider {...settings}>
+  return (
+    //maxWidth={'xl'}
+    <Hidden xsDown>
+      <Container maxWidth={'xl'} >
+        <Slider {...settings}>
 
-                <Page><StyledImage src={p1} alt="Logo" /></Page>
-                <Page><StyledImage src={p2} alt="Logo" /></Page>
-                <Page><StyledImage src={p3} alt="Logo" /></Page>
-                <Page><StyledImage src={p5} alt="Logo" /></Page>
-                <Page><StyledImage src={p6} alt="Logo" /></Page>
-                <Page><StyledImage src={p7} alt="Logo" /></Page>
-                <Page><StyledImage src={p8} alt="Logo" /></Page>
-                <Page><StyledImage src={p9} alt="Logo" /></Page>
+          <Page><StyledImage src={p1} alt="Logo" /></Page>
+          <Page><StyledImage src={p2} alt="Logo" /></Page>
+          <Page><StyledImage src={p3} alt="Logo" /></Page>
+          <Page><StyledImage src={p5} alt="Logo" /></Page>
+          <Page><StyledImage src={p6} alt="Logo" /></Page>
+          <Page><StyledImage src={p7} alt="Logo" /></Page>
+          <Page><StyledImage src={p8} alt="Logo" /></Page>
+          <Page><StyledImage src={p9} alt="Logo" /></Page>
 
 
-               
-            </Slider>
-        </Container>
-  
-    )
+        </Slider>
+      </Container>
+    </Hidden>
+
+  )
 
 
 }

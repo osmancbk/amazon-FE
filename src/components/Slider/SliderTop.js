@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { Wrapper, StyledImage, Page } from './SliderTop.style';
-import { Container } from '@material-ui/core';
+import { styles, Wrapper, StyledImage, Page } from './SliderTop.style';
+import { Container, Hidden } from '@material-ui/core';
 
 import p1 from '../../assets/1.jpg'
 import p2 from '../../assets/2.jpg'
@@ -12,22 +12,21 @@ import p6 from '../../assets/6.jpg'
 import p7 from '../../assets/7.jpg'
 
 
-
 export default function SliderTop() {
+    const classes = styles();
     var settings = {
-        // infinite: true,
+        infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        // centerMode: true,
-        // centerPadding: '60px',
-
-
-
+    //  arrows: true,
+    //  nextArrow: <SampleNextArrow />,
+    //   prevArrow: <SamplePrevArrow />
+       
     };
-
+//className={classes.wrapper} 
     return (
-
-        <Wrapper>
+        // <Hidden xsDown>
+        <Container maxWidth={'xl'} className={classes.root} >
+    {/* //   <Wrapper>  */}
             <Slider {...settings}>
                 <Page><StyledImage src={p1} alt="Logo" /></Page>
                 <Page><StyledImage src={p2} alt="Logo" /></Page>
@@ -38,8 +37,9 @@ export default function SliderTop() {
                 <Page><StyledImage src={p7} alt="Logo" /></Page>
 
             </Slider>
-        </Wrapper>
-
+        {/* //  </Wrapper>  */}
+        </Container>
+        // </Hidden>
     )
 
 
