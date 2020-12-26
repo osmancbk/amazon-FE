@@ -30,8 +30,8 @@ export const styles = makeStyles({
     objectFit: 'contain',
 
   },
-  inCard: {
-
+  price: {
+    marginBottom: 15,
 
   },
   actions: {
@@ -44,7 +44,8 @@ export const styles = makeStyles({
   button: {
     background: 'linear-gradient(45deg, #F3CF75 30%, #F2CA66 90%)',
     color: "black",
-    textTransform: "none"
+    textTransform: "none",
+    fontSize: 12,
   }
 });
 

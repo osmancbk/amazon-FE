@@ -37,7 +37,7 @@ export function MediaCard({ productImage, productTitle, productPrice, productCat
 
       <CardActions className={classes.actions}>
 
-        <Typography variant="h6" color="textSecondary" component="h6">
+        <Typography variant="h6" color="textSecondary" component="h6"  className={classes.price}>
           {`${productPrice} $`}
         </Typography>
 
@@ -46,13 +46,13 @@ export function MediaCard({ productImage, productTitle, productPrice, productCat
             size="small"
             type="Submit"
             variant="contained" >
-            Buy now
+            Add to Basket
          </Button>
           <Button className={classes.button}
             size="small"
             type="Submit"
             variant="contained" >
-            See more
+            See more ...
         </Button>
         </Grid>
       </CardActions>
