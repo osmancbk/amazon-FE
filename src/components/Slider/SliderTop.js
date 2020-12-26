@@ -20,13 +20,10 @@ export default function SliderTop() {
     //  arrows: true,
     //  nextArrow: <SampleNextArrow />,
     //   prevArrow: <SamplePrevArrow />
-       
     };
-//className={classes.wrapper} 
     return (
         // <Hidden xsDown>
         <Container maxWidth={'xl'} className={classes.root} >
-    {/* //   <Wrapper>  */}
             <Slider {...settings}>
                 <Page><StyledImage src={p1} alt="Logo" /></Page>
                 <Page><StyledImage src={p2} alt="Logo" /></Page>
@@ -37,7 +34,6 @@ export default function SliderTop() {
                 <Page><StyledImage src={p7} alt="Logo" /></Page>
 
             </Slider>
-        {/* //  </Wrapper>  */}
         </Container>
         // </Hidden>
     )

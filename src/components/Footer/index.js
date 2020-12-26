@@ -73,7 +73,7 @@ export default function Footer() {
 
                     <Grid container spacing={3}  direction="row" justify="space-evenly" alignItems="center">
 
-                        <Grid  item container  spacing={3} lg={1} md={1} sm={1} xs={12} 
+                        <Grid  item container  spacing={3} lg={1} md={4} sm={2} xs={6} 
                          direction="row" 
                         >
 
@@ -83,7 +83,7 @@ export default function Footer() {
 
                         </Grid>
 
-                        <Grid item container  spacing={3} lg={5} md={5} sm={5} xs={12}
+                        <Grid item container  spacing={3} lg={5} md={8} sm={10} xs={6}
                         direction="row" 
                         >
 

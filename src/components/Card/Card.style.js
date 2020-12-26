@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 // import CardMedia from '@material-ui/core/CardMedia';
 
+
+//------UI------//
 export const styles = makeStyles({
   root: {
     maxWidth: 300,
@@ -47,6 +49,8 @@ export const styles = makeStyles({
 });
 
 
+
+//------Styled Comp------//
 export const Price = styled.p`
 /* font-weight: 'bold'; */
     /* font-size: 14px; */

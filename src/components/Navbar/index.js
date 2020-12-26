@@ -1,78 +1,97 @@
 import React, { useState } from 'react';
-import "./Navbar.css";
+import { styles, DrawerButton, NavLogo, SignIn } from './Navbar.style'
 import { Link } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from '../../assets/amazonLg.png'//*
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Drawer, IconButton } from '@material-ui/core';
+import { Drawer, IconButton, Container, Grid, TextField, Hidden } from '@material-ui/core';
 
 function Navbar() {
+  const classes = styles();
+
   const [open, setOpen] = useState(false)
 
   const handleDrawer = () => {
     setOpen(true)
   }
 
-  return (
-    <div className="navbarContainer">
+  function NavbarRight() {
+    return (
+      <>
+        <Grid item xs={5}>
+          <SignIn>SignIn</SignIn>
+          <SignIn>&Account</SignIn>
+        </Grid>
 
+        <Grid item xs={4}>
+          <SignIn>Returns</SignIn>
+          <SignIn>&Orders</SignIn>
+        </Grid>
 
-      <IconButton onClick={handleDrawer}>
-        <div className="navbarMenuIcon">
-          <MenuIcon />
-        </div>
-      </IconButton>
-
-      <Link to="/">
-        <img className='navbarImg'
-          src={logo} alt="Logo" />
-      </Link>
-
-      <div className='navbarSearchBar'>
-        <input className='navbarSearchInput' />
-        <SearchIcon className='navbarSearchIcon' />
-
-      </div>
-
-      <div className="header__nav">
-
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
-
-
-        <div className="header__option">
-          <span className="header__optionLineOne">Returns</span>
-          <span className="header__optionLineTwo">& Orders</span>
-        </div>
-
-
-
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
-          <span className="header__optionLineTwo">Prime</span>
-        </div>
-
-
-        <div className="header__optionBasket">
+        <Grid item xs={3}>
           <ShoppingCartIcon />
-          <span className="header__optionLineTwo header__basketCount">
-            0
-            </span>
-        </div>
-      </div>
+          <SignIn> 0 </SignIn>
+        </Grid>
+      </>
+    );
+  }
+
+  return (
+    <Container maxWidth={'xl'} className={classes.root}>
+      <Grid container spacing={3} >
+
+        <Grid item xs={1} sm={1} md={1} container>
+          <IconButton onClick={handleDrawer}>
+            <MenuIcon fontSize='large' style={{ color: 'white' }} />
+          </IconButton>
+        </Grid>
+        <Hidden xsDown>
+          <Grid item xs={1} sm={2} md={2} container >
+
+            <Link to="/">
+              <NavLogo src={logo} alt="Logo" />
+            </Link>
+
+          </Grid>
+        </Hidden>
+        <Grid item xs={5} sm={4} md={6} container >
+          <Grid xs={11}>
+            <TextField
+              id="filled"
+              label="Search"
+              variant="outlined"
+              size="small"
+              fullWidth
+              style={{
+                backgroundColor: 'white',
+      
+              }} />
+          </Grid>
+          <Grid xs={1}>
+            <SearchIcon class={classes.SearchIcon} />
+          </Grid>
+        </Grid>
+
+
+        <Grid item xs={5} sm={5} md={3} container spacing={3}>
+          <NavbarRight />
+        </Grid>
+
+      </Grid>
+
+
       <Drawer
         anchor='left'
         open={open}
-        onClose={()=> setOpen(false)}
+        onClose={() => setOpen(false)}
 
       >
         <h3>This is a Drawer ... </h3>
 
       </Drawer>
-    </div>
+
+    </Container>
   )
 }
 

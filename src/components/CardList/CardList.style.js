@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import styled from 'styled-components';
 
+
+//------UI------//
 export const styles = makeStyles((theme) => ({
     root: {
         [theme.breakpoints.down('xl')]: {
@@ -48,7 +50,7 @@ export const styles = makeStyles((theme) => ({
 }));
 
 
-
+//------Styled Comp------//
 export const Box = styled.div`
       font-variant: small-caps;
       font-weight: bold;

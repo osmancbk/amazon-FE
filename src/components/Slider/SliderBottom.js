@@ -23,7 +23,7 @@ export default function SliderTop() {
     initialSlide: 0,
 
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     // arrow: true,
     autoplay: true,
     autoplaySpeed: 1300,
@@ -32,8 +32,8 @@ export default function SliderTop() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
 
         }
@@ -41,8 +41,8 @@ export default function SliderTop() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           // initialSlide: 2
           infinite: true,
         }
@@ -50,7 +50,7 @@ export default function SliderTop() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         }
