@@ -62,25 +62,9 @@ export default function SliderTop() {
 
 
     return (
-
-        <Container>
-            <Slider {...settings}
-           // infinite = {true}
-            // slidesToShow = {5}
-            // speed={900}
-             // slidesToScroll={3}
-            // arrows = {true}
-
-            //   dots = {true}
-            //   speed = {300}
-            //   centerMode = {true}
-            // infinite={false}
-            // lazyLoad= {true}
-            // slidesToShow={3}
-            // dots={true}
-            // accessibility = {true}
-   
-            >
+//maxWidth={'xl'}
+        <Container maxWidth={'xl'} >
+            <Slider {...settings}>
 
                 <Page><StyledImage src={p1} alt="Logo" /></Page>
                 <Page><StyledImage src={p2} alt="Logo" /></Page>

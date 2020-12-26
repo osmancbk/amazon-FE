@@ -18,9 +18,9 @@ import { styles, Box } from './CardList.style'
 export function CardList() {
     const classes = styles();
     const { productList } = useContext(ProductContext)
-    //maxWidth="sm"
+    //maxWidth="sm"  maxWidth={'xl'}
     return (
-        <Container className={classes.wrapper} >
+        <Container className={classes.wrapper} maxWidth={'xl'}> 
             <Grid container className={classes.grid}>
                 <Grid item xs={12} >
                     <Box>   indirim kuponundan yararlanmak için kupon kısmına CODE47 yazınız.</Box>
